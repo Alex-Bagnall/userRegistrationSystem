@@ -1,0 +1,65 @@
+<div class="container">
+	<div class="alert alert-danger" role="alert" ng-if="errorMessage">
+		{{errorMessage}}</div>
+	<div class="panel panel-default">
+		<div class="alert alert-success">
+			<span class="lead">Update Existing User</span>
+			<p>Please maintain uniqueness of User-Name</p>
+		</div>
+		<div class="panel-body">
+			<div class="container">
+				<form ng-submit="submitUserForm()" name="myForm"
+					class="form-horizontal">
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-label" for="username">Name</label>
+							<div class="col-md-7">
+								<input type="text" ng-model="user.name" id="username"
+									class="form-control input-sm" placeholder="Enter user name" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-label" for="email">Email</label>
+							<div class="col-md-7">
+								<input type="email" ng-model="user.email" id="email"
+									class="form-control input-sm" placeholder="Enter user email" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-label" for="country">Country</label>
+							<div class="col-md-7">
+								<input type="text" ng-model="user.country" id="country"
+									class="form-control input-sm" placeholder="Enter user country" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-label" for="sport">Sport</label>
+							<div class="col-md-7">
+								<input type="text" ng-model="user.sport" id="sport"
+									class="form-control input-sm" placeholder="Enter user sport" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-actions floatRight">
+
+
+							<input type="submit" value="Update User"
+								class="btn btn-primary btn-sm">
+							<button type="button" ng-click="resetForm()"
+								class="btn btn-warning btn-sm">Reset Form</button>
+
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,77 @@
+<div class="container">
+	<div class="alert alert-danger" role="alert" ng-if="errorMessage">
+		<div ng-if="errorMessage.message">{{errorMessage.message}}</div>
+		<div ng-if="errorMessage.errors">
+
+			<div ng-repeat="err in errorMessage.errors">{{err[0].message}}
+			</div>
+		</div>
+
+
+	</div>
+	<div class="panel panel-default">
+		<div class="alert alert-success">
+			<span class="lead">Register New User</span>
+			<p>Please maintain uniqueness of User-Name</p>
+		</div>
+		<div class="panel-body">
+			<div class="container">
+				<form ng-submit="submitUserForm()" name="myForm"
+					class="form-horizontal">
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-12 control-label" for="username">
+								Name </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="user.name" id="username"
+									class="form-control input-sm" placeholder="Enter user name">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-12 control-label" for="email"> Email
+							</label>
+							<div class="col-md-7">
+								<input type="email" ng-model="user.email" id="email"
+									class="form-control input-sm" placeholder="Enter user email">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-12 control-label" for="country">
+								Country </label>
+							<div class="col-md-7">
+								<input type="text" ng-model="user.country" id="country"
+									class="form-control input-sm" placeholder="Enter user country">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-12 control-label" for="sport"> Sport
+							</label>
+							<div class="col-md-7">
+								<input type="text" ng-model="user.sport" id="sport"
+									class="form-control input-sm"
+									placeholder="Enter user favourite sport">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-actions floatRight">
+
+
+							<input type="submit" value="Register User"
+								class="btn btn-primary btn-sm">
+							<button type="button" ng-click="resetForm()"
+								class="btn btn-warning btn-sm">Reset Form</button>
+
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
